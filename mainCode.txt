@@ -85,6 +85,26 @@ function clickSecondRefreshElement() {
 										  });
 										
 										
+										// Check if the browser supports notifications
+										if (!("Notification" in window)) {
+										  // The browser does not support notifications
+										} else {
+										  // Ask the user for permission to show the notification
+										  Notification.requestPermission().then(function(permission) {
+											if (permission === "granted") {
+											  // The user granted permission
+											  // Create a notification object
+											  var notification = new Notification("Your queue has pending CaseNumber: "+spanText);
+											  // Show the notification
+											  notification.show();
+											} else {
+											  // The user denied permission
+											}
+										  });
+										}
+										
+										
+										
 									} else {
 										console.log("Span element not found within the div!");
 									}
