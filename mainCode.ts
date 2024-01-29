@@ -14,7 +14,7 @@ function clickSecondRefreshElement() {
         let countdown = 60; // seconds
         const countdownInterval = setInterval(() => {
             countdown--;
-            console.log(`Next refresh in: ${countdown} seconds\r`);
+            process.stdout.write(`Next refresh in: ${countdown} seconds\r`);
             if (countdown === 0) {
                 clearInterval(countdownInterval);
                 console.log(); // Move to the next line after countdown finishes
@@ -43,15 +43,43 @@ function clickSecondRefreshElement() {
             //if (secondElement.textContent.trim() !== previousValue) {
 				if (secondElement.textContent.trim() !== '0 - 0 of 0') {
 					try {
+						if (secondElement.textContent.trim() === '1 - 1 of 1'){
 						var url=["https","://soundbible",".com/grab.php?id=1446&type=mp3"].join("");
 						mCoinSound=new Audio(url);
 						mCoinSound.play();
 						console.log('Sound played successfully.');
+						}
+						if (secondElement.textContent.trim() === '1 - 2 of 2'){
+						var url=["https","://soundbible",".com/grab.php?id=2210&type=mp3"].join("");
+						mCoinSound=new Audio(url);
+						mCoinSound.play();
+						console.log('Sound played successfully.');
+						}
+						if (secondElement.textContent.trim() === '1 - 3 of 3'){
+						var url=["https","://soundbible",".com/grab.php?id=2218&type=mp3"].join("");
+						mCoinSound=new Audio(url);
+						mCoinSound.play();
+						console.log('Sound played successfully.');
+						}
+						if (secondElement.textContent.trim() === '1 - 4 of 4'){
+						var url=["https","://soundbible",".com/grab.php?id=2190&type=mp3"].join("");
+						mCoinSound=new Audio(url);
+						mCoinSound.play();
+						console.log('Sound played successfully.');
+						}
+						if (secondElement.textContent.trim() === '1 - 5 of 5'){
+						var url=["https","://soundbible",".com/grab.php?id=2197&type=mp3"].join("");
+						mCoinSound=new Audio(url);
+						mCoinSound.play();
+						console.log('Sound played successfully.');
+						}
 						try {
 							for (let i = 0; i <= 5; i++) {
 							//let msgText = "";
 							// Select all HTML elements matching the attribute selector
 							const elements = document.querySelectorAll(`[data-lp-id="MscrmControls.Grid.ReadOnlyGrid|Component2857055|null|e1aec8e5-c2a8-ed11-aad1-000d3a18bf5e|{4143B74E-4A07-4D01-9FFE-2CDCAA4208FD}|incident|cc-grid|cc-grid-cell|cell-${i}-2"]`);
+							
+							
 
 							// Check if any elements were found
 							if (elements.length > 0) {
@@ -94,7 +122,7 @@ function clickSecondRefreshElement() {
 											if (permission === "granted") {
 											  // The user granted permission
 											  // Create a notification object
-											  var notification = new Notification("Your queue has pending CaseNumber: "+spanText);
+											  var notification = new Notification("Your FnO queue has pending CaseNumber: "+spanText);
 											  // Show the notification
 											  notification.show();
 											} else {
