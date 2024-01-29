@@ -14,7 +14,7 @@ function clickSecondRefreshElement() {
         let countdown = 60; // seconds
         const countdownInterval = setInterval(() => {
             countdown--;
-            process.stdout.write(`Next refresh in: ${countdown} seconds\r`);
+            console.log(`Next refresh in: ${countdown} seconds\r`);
             if (countdown === 0) {
                 clearInterval(countdownInterval);
                 console.log(); // Move to the next line after countdown finishes
