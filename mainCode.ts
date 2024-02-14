@@ -77,7 +77,7 @@ function clickSecondRefreshElement() {
 							for (let i = 0; i <= 5; i++) {
 							//let msgText = "";
 							// Select all HTML elements matching the attribute selector
-							const elements = document.querySelectorAll(`[data-lp-id="MscrmControls.Grid.ReadOnlyGrid|Component2857055|null|e1aec8e5-c2a8-ed11-aad1-000d3a18bf5e|{4143B74E-4A07-4D01-9FFE-2CDCAA4208FD}|incident|cc-grid|cc-grid-cell|cell-${i}-2"]`);
+							const elements = document.querySelectorAll(`[data-lp-id="MscrmControls.Grid.ReadOnlyGrid|Component2857055|null|9281653c-c3be-ee11-9079-6045bdef7c5a|{4143B74E-4A07-4D01-9FFE-2CDCAA4208FD}|incident|cc-grid|cc-grid-cell|cell-${i}-2"]`);
 							
 							
 
